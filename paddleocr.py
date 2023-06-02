@@ -27,7 +27,7 @@ import logging
 import numpy as np
 from pathlib import Path
 
-tools = importlib.import_module('.', 'tools')
+tools = importlib.import_module('.', 'paddleocr.tools')
 ppocr = importlib.import_module('.', 'ppocr')
 ppstructure = importlib.import_module('.', 'ppstructure')
 
