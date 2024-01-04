@@ -109,7 +109,7 @@ class TextClassifier(object):
             else:
                 self.input_tensor.copy_from_cpu(norm_img_batch)
                 self.predictor.run()
-                prob_out = self.output_tensors[0].copy_to_cpu()
+                prob_out = self.output_tensors[0]  # .copy_to_cpu()
                 self.predictor.try_shrink_memory()
             cls_result = self.postprocess_op(prob_out)
             elapse += time.time() - starttime
